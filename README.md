@@ -34,10 +34,13 @@ data_transforms = transforms.Compose(
     ]
 )
 ```
-
+Data link = https://drive.google.com/file/d/1dkXELnY5UpUrX0o4NoqVa6Bc-e5C6maH/view?usp=share_link
 
 Model:
 - Resnet_50
+
+Model lin = https://drive.google.com/file/d/1M0CGAgtcFYVYdDd3523KzhG9CpgYvsUL/view?usp=sharing
+
 ```
 # model = torch.load("Resnet50_Left_Pretraine%d_ver1.1.pth") #Load model to CPU
 model = models.resnet50()
