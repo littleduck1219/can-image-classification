@@ -7,6 +7,15 @@
 - 웹캠 on/off 기능
 - 웹캠 출력화면 캡쳐 기능
 
+사용언어 및 개발환경	
+사용언어 : python, html, css, javascript
+개발환경 : Azure Virtual Rab 
+         - Window Server 2019 Datacenter
+         - Intel Xeon CPU E5-2690 2.60GHz, 2.59 GHz
+         - 112GB RAM
+         - NDVIA Tesla V100-16GB
+         Pycharm
+         Flask
 
 Dataset:
 - 10개의 라벨 각 300장씩 수집
