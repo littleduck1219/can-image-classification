@@ -1,6 +1,8 @@
 # drink_image_classification
 캔 이미지를 분류 하는 모델을 만들어, 웹에서 웹캠으로 실행할 수 있도록 하였습니다.
-![Screenshot 2023-01-18 at 9 29 45 PM](https://user-images.githubusercontent.com/107936957/214236266-a4783dde-9d74-4aa9-96ef-519973952619.png)
+![Screenshot 2023-03-01 at 9 52 06 PM](https://user-images.githubusercontent.com/107936957/222144925-380c6050-b2f0-4817-91f0-dde6a1143e1f.png)
+![Screenshot 2023-03-01 at 9 51 50 PM](https://user-images.githubusercontent.com/107936957/222144987-b9867cad-d040-4870-815f-41d574444113.png)
+
 
 라벨은 총 10개로 진행하였으며, 인당 2개의 라벨을 맡아서 정보수집을 하였습니다.
 
