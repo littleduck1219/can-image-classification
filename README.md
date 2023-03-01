@@ -1,24 +1,37 @@
 # drink_image_classification
-캔 이미지를 분류 하는 모델을 만들어, 웹에서 웹캠으로 실행할 수 있도록 하였습니다.
 ![Screenshot 2023-03-01 at 9 52 06 PM](https://user-images.githubusercontent.com/107936957/222144925-380c6050-b2f0-4817-91f0-dde6a1143e1f.png)
 ![Screenshot 2023-03-01 at 9 51 50 PM](https://user-images.githubusercontent.com/107936957/222144987-b9867cad-d040-4870-815f-41d574444113.png)
 
-
-라벨은 총 10개로 진행하였으며, 인당 2개의 라벨을 맡아서 정보수집을 하였습니다.
-
-정보수집은 일정 수량 직접 찍어 나머지는 합성을 하는 방법으로 진행하였습니다.
-
-찍은 이미지와, 합성한 이미지의 사이즈가 달라 resize를 하려고 하였으나, 합성사진을 resize시에 형태가 깨지는 현상이 발생하여,
-padding을 먼저 실시한 후에 resize하였습니다.
-
-albumentation으로 최대한 라벨의 형태와 색을 건드리지 않는 것 들로만 선택하였습니다.
+기능설명:
+- 학습한 음료 10가지 웹에서 웹캠을 이용하여 인식 및 분류(이름 표시 및 유사도)
+- 웹캠 on/off 기능
+- 웹캠 출력화면 캡쳐 기능
 
 
-분류 모델은 ResNET_50을 사용하였습니다.
+Dataset:
+- 10개의 라벨 각 300장씩 수집
+- 찍은 이미지와, 합성한 이미지의 사이즈가 달라 resize를 하려고 하였으나, 
+  합성사진을 resize시에 형태가 깨지는 현상이 발생하여, padding을 먼저 실시한 후에 resize하였습니다.
+
+Augmentation:
+```
+data_transforms = transforms.Compose(
+    [
+        transforms.Resize((224, 224)),
+        # transforms.RandomHorizontalFlip(),
+        transforms.ToTensor(),
+        transforms.Normalize([0.485,0.456,0.406],[0.229,0.224,0.225])
+    ]
+)
+```
+
+
+Model:
+- Resnet_50
 
 ![Screenshot 2023-01-18 at 12 41 25 PM](https://user-images.githubusercontent.com/107936957/214236417-c520fcbb-4626-42c3-ac73-c192ab64d929.png)
 
-epoch에 따른 accurancy결과 이며 test는 100%결과가 나왔습니다.
+Accurancy : 100
 
 
 ![capture 2023-01-17 01_36_42](https://user-images.githubusercontent.com/107936957/214236698-0a074051-a669-4800-8333-bf081d9cc18b.png)
