@@ -1,4 +1,4 @@
-# can-image-classification
+# drink_image_classification
 캔 이미지를 분류 하는 모델을 만들어, 웹에서 웹캠으로 실행할 수 있도록 하였습니다.
 ![Screenshot 2023-01-18 at 9 29 45 PM](https://user-images.githubusercontent.com/107936957/214236266-a4783dde-9d74-4aa9-96ef-519973952619.png)
 
