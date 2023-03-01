@@ -28,6 +28,15 @@ data_transforms = transforms.Compose(
 
 Model:
 - Resnet_50
+```
+# model = torch.load("Resnet50_Left_Pretraine%d_ver1.1.pth") #Load model to CPU
+model = models.resnet50()
+model.fc = nn.Linear(in_features=2048, out_features=10)
+# model.load_state_dict(torch.load("resnet18_AdamW_Lr001_E40.pt", map_location=torch.device('cpu')))
+model.load_state_dict(torch.load("resnet_50_best.pt", map_location=torch.device('cpu')))
+model = model.to(device)  # set where to run the model and matrix calculation
+model.eval()  # set the device to eval() mode for testing
+```
 
 ![Screenshot 2023-01-18 at 12 41 25 PM](https://user-images.githubusercontent.com/107936957/214236417-c520fcbb-4626-42c3-ac73-c192ab64d929.png)
 
