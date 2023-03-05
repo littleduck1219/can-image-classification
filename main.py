@@ -69,13 +69,13 @@ valid_loader = DataLoader(valid_dataset, batch_size=128, shuffle=False, num_work
 # model = models.resnet18(pretrained=False)
 # model.fc = nn.Linear(in_features=512, out_features=10)
 
-name = "resnet34"
-model = models.resnet18(pretrained=False)
-model.fc = nn.Linear(in_features=512, out_features=10)
+# name = "resnet34"
+# model = models.resnet18(pretrained=False)
+# model.fc = nn.Linear(in_features=512, out_features=10)
 
-# name = "resnet_50"
-# model = models.resnet50(pretrained=True)
-# model.fc = nn.Linear(in_features=2048, out_features=10)
+name = "resnet_50"
+model = models.resnet50(pretrained=True)
+model.fc = nn.Linear(in_features=2048, out_features=10)
 
 # name = "efficientnet_b3"
 # model = models.efficientnet_b3(pretrained=True)
@@ -97,7 +97,7 @@ model.to(device)
 
 # hyper parameter ======================================================================================================
 loss_function = LabelSmoothingCrossEntropy()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.001)  # Adam,  AdamW, RMSprop
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)  # Adam, AdamW, RMSprop
 epochs = 25
 exp_lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
 
